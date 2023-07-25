@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="SeedData\**" />
+    <EmbeddedResource Remove="SeedData\**" />
+    <EntityDeploy Remove="SeedData\**" />
+    <None Remove="SeedData\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\AlbumForCreatingDto.cs" />
+    <Compile Remove="Models\AlbumForUpdatingDto.cs" />
+    <Compile Remove="Models\AlbumManipulationDto.cs" />
+    <Compile Remove="Models\BandForCreatingDto.cs" />
+    <Compile Remove="Models\BandForUpdatingDto.cs" />
+    <Compile Remove="Models\LinkDto.cs" />
+    <Compile Remove="Models\MatHangDto.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Bogus" Version="34.0.2" />
+    <PackageReference Include="LinqKit" Version="1.1.27" />
+    <PackageReference Include="MongoDB.Driver" Version="2.19.0" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="3.1.18" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.Design" Version="1.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MuaVatTu.Common\MuaVatTu.Common.csproj" />
+    <ProjectReference Include="..\MuaVatTu.Data\MuaVatTu.Data.csproj" />
+  </ItemGroup>
+
+</Project>
